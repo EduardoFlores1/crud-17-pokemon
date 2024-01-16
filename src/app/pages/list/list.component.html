@@ -1,0 +1,18 @@
+<div class="list">
+  <div class="content">
+    @for (deck of decks$ | async; track $index) {
+    <div class="card" style="width: 18rem;">
+      <img [src]="deck.deck[0]" class="card-img-top" [alt]="deck.name">
+      <div class="card-body">
+        <h5 class="card-title">{{ deck.name }}</h5>
+        <p class="card-text">{{ deck.description }}</p>
+        <a [routerLink]="'/detail/' + deck.id" class="btn btn-primary">Ver Deck</a>
+        <a [routerLink]="'/edit/' + deck.id" class="btn btn-warning">Editar</a>
+        <button type="button" class="btn btn-danger" (click)="deleteDeck(deck.id)">
+          Eliminar
+        </button>
+      </div>
+    </div>
+    }
+  </div>
+</div>

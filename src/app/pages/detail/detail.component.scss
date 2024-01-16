@@ -1,0 +1,22 @@
+.detail {
+  background-color: #1d90ce;
+  height: 100vh;
+  padding: 2.5rem;
+
+  .content {
+    padding: 1em;
+    background-color: white;
+    border-radius: 8px;
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+ 
+      img{
+        width: 100%;
+        max-width: 260px;
+      }
+    }
+  }
+}
